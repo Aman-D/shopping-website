@@ -1,4 +1,9 @@
 body{
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-    padding:20px 80px;
+    padding:20px 60px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
 }
