@@ -5,16 +5,20 @@ import { CartToggel } from '../../redux/cart/cart.actions';
 
 import './cart-icon.styles.scss';
 
-const CartIcon = ({ CartToggel }) => (
+const CartIcon = ({ CartToggel, cartItems }) => (
     <div className="cart-icon">
         <ShoppingIcon className="shopping-icon" onClick={CartToggel} />
-        <span className="item-count">10</span>
+        <span className="item-count">{cartItems.length}</span>
     </div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
     CartToggel: () => dispatch(CartToggel())
+});
+
+const mapStatetoProps = state => ({
+    cartItems: state.cart.cartItems
 })
 
-export default connect(null, mapDispatchToProps)(CartIcon);
+export default connect(mapStatetoProps, mapDispatchToProps)(CartIcon);
 
