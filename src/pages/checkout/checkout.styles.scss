@@ -1,0 +1,38 @@
+.checkout {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  .total-price {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.226);
+    height: 80px;
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .empty {
+    font-size: 20px;
+    height: 350px;
+    display: grid;
+    place-items: center;
+  }
+  .heading {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 20% 20% 10%;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.226);
+    .head {
+      padding: 10px;
+    }
+  }
+}

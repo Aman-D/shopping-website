@@ -1,0 +1,49 @@
+.checkout-item {
+  height: 150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 20% 20% 10%;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.315);
+  position: relative;
+  .remove {
+    cursor: pointer;
+  }
+  .image-container {
+    height: 150px;
+    width: 100%;
+    img {
+      display: block;
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+    }
+  }
+  .AR {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+  }
+  .addItem {
+    position: absolute;
+    top: 50%;
+    right: -7%;
+    transform: translateY(-50%);
+    background-color: rgba(108, 253, 103, 0.397);
+    // transform: translate(-50%, -50%);
+  }
+  .removeItem {
+    position: absolute;
+    left: -7%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 43, 43, 0.404);
+    // transform: translate(-50%, -50%);
+  }
+}
