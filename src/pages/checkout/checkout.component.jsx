@@ -2,7 +2,7 @@ import React from "react";
 import "./checkout.styles.scss";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
-
+import StripButton from "../../components/stripe-button/stripe-button.component";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectItems, selectTotalPrice } from "../../redux/cart/cart.selector";
@@ -23,7 +23,15 @@ const Checkout = ({ cartItems, totalPrice }) => (
       <span className="empty">Your Cart is Empty</span>
     )}
     {totalPrice ? (
-      <span className="total-price">Total Price :₹ {totalPrice}</span>
+      <div>
+        <span className="total-price">Total Price :₹ {totalPrice}</span>
+        <StripButton price={totalPrice} />
+        <div className="warning">
+          <p> Use the following card no. for payment 4242 4242 4242 4242</p>
+          <p>For date use any Future date</p>
+          <p>For CVV use any 3 digit number</p>
+        </div>
+      </div>
     ) : (
       ""
     )}
