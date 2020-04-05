@@ -1,34 +1,32 @@
 .cart-dropdown {
-    position: absolute;
-    width: 300px;
-    height: 540px;
+  position: absolute;
+  width: 300px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.959);
+  top: 90px;
+  right: 40px;
+  z-index: 5;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.575);
+
+  .cart-items {
+    height: 440px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: white;
-    top: 90px;
-    right: 40px;
-    z-index: 5;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.575);
-  
-  
-    .cart-items {
-      height: 440px;
-      display: flex;
-      flex-direction: column;
-      overflow: scroll;
-      overflow-x: hidden;
-    }
-  
-    button {
-      margin-top: auto;
-    }
-
-    .total-price{
-      display: flex;
-      justify-content: center;
-      font-size: 01.2rem;
-      padding:20px;
-    }
+    overflow: scroll;
+    overflow-x: hidden;
   }
-  
+
+  button {
+    margin-top: auto;
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: center;
+    font-size: 01.2rem;
+    padding: 20px;
+  }
+}
