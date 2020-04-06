@@ -1,43 +1,42 @@
 .custom-button {
-    min-width: 165px;
-    width: auto;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 15px;
-    background-color: rgb(12,12,12);
+  display: flex;
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  text-transform: uppercase;
+  justify-content: center;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: rgb(12, 12, 12);
+    border: 1px solid rgb(12, 12, 12);
+  }
+
+  &.google {
+    background-color: #4285f4;
     color: white;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-  
     &:hover {
-      background-color: white;
-      color: rgb(12,12,12);
-      border: 1px solid rgb(12,12,12);
-    }
-
-    &.google{
-      background-color:#4285f4;
-      color:white;
-      &:hover{
-        background-color:#357ae8;
-        border:none;
-      }
-    }
-
-    &.inverted{
-      background-color: white;
-      color: rgb(12,12,12);
-      border: 1px solid rgb(12,12,12);
-      &:hover{
-        background-color: rgb(12,12,12);
-        color: white;
-      }
+      background-color: #357ae8;
+      border: none;
     }
   }
-  
+
+  &.inverted {
+    background-color: white;
+    color: rgb(12, 12, 12);
+    border: 1px solid rgb(12, 12, 12);
+    &:hover {
+      background-color: rgb(12, 12, 12);
+      color: white;
+    }
+  }
+}
