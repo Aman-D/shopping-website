@@ -12,7 +12,14 @@
     box-shadow: 0 0 11px 1px #000;
     display: none;
   }
-
+  .image {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+    opacity: 100%;
+  }
   &:hover {
     .image {
       opacity: 80%;
@@ -20,13 +27,6 @@
     .custom-button {
       display: flex;
     }
-  }
-  .image {
-    width: 100%;
-    height: 95%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 5px;
   }
 
   .collection-footer {
