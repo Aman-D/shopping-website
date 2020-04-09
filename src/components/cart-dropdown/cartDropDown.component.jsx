@@ -8,28 +8,29 @@ import { withRouter } from "react-router-dom";
 
 import { CartToggel } from "../../redux/cart/cart.actions";
 
-import "./cartDropDown.styles.scss";
+import {
+  CartDropDownConatiner,
+  CartItemConatiner,
+  EmptyMessage,
+  TotalPrice,
+} from "./cartDropDown.style";
 
 const CartDropDown = ({ cartItems, history, dispatch }) => {
   var price = 0;
   return (
-    <div className="cart-dropdown">
-      <div className="cart-items">
+    <CartDropDownConatiner>
+      <CartItemConatiner>
         {cartItems.length ? (
-          cartItems.map(item => {
+          cartItems.map((item) => {
             price += item.quantity * item.price;
             return <CartItem key={item.id} item={item} />;
           })
         ) : (
-          <span className="empty-message">Your cart is empty</span>
+          <EmptyMessage>Your cart is empty</EmptyMessage>
         )}
-      </div>
+      </CartItemConatiner>
 
-      {price != 0 ? (
-        <span className="total-price">Total Price: {price}</span>
-      ) : (
-        ""
-      )}
+      {price != 0 ? <TotalPrice>Total Price: {price}</TotalPrice> : ""}
 
       <CustomButton
         onClick={() => {
@@ -39,12 +40,12 @@ const CartDropDown = ({ cartItems, history, dispatch }) => {
       >
         Go To Checkout
       </CustomButton>
-    </div>
+    </CartDropDownConatiner>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectItems
+  cartItems: selectItems,
 });
 
 //When mapDispatchToProps is not send in connect as an argument, then the connect will itself give dispatch as a prop.
