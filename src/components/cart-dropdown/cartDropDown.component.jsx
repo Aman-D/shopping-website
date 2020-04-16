@@ -30,7 +30,7 @@ const CartDropDown = ({ cartItems, history, dispatch }) => {
         )}
       </CartItemConatiner>
 
-      {price != 0 ? <TotalPrice>Total Price: {price}</TotalPrice> : ""}
+      {price !== 0 ? <TotalPrice>Total Price: {price}</TotalPrice> : ""}
 
       <CustomButton
         onClick={() => {

@@ -1,8 +1,11 @@
 import { createSelector } from "reselect";
 
-const shop = state => state.shop;
+const shop = (state) => state.shop;
 
-export const getCollections = createSelector([shop], shop => shop.collections);
+export const getCollections = createSelector(
+  [shop],
+  (shop) => shop.collections
+);
 
 /**
  * getCollection will return an object as of now our data is stored in the form of an object.
@@ -13,9 +16,12 @@ export const getCollections = createSelector([shop], shop => shop.collections);
 
 export const selectonCollectionPreview = createSelector(
   [getCollections],
-  collections => Object.keys(collections).map(key => collections[key])
+  (collections) =>
+    collections ? Object.keys(collections).map((key) => collections[key]) : []
 );
 
-export const getCollection = id => {
-  return createSelector(getCollections, collections => collections[id]);
+export const getCollection = (id) => {
+  return createSelector(getCollections, (collections) =>
+    collections ? collections[id] : null
+  );
 };
