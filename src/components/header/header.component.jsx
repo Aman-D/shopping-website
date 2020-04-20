@@ -20,6 +20,7 @@ import {
 } from "./header.style";
 
 const Header = ({ currentUser, hidden }) => {
+  console.log(currentUser);
   return (
     <HeaderContainer>
       <LogoContainer to="/">

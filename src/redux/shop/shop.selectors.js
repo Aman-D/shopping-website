@@ -25,3 +25,13 @@ export const getCollection = (id) => {
     collections ? collections[id] : null
   );
 };
+
+export const selectIsCollectionFetching = createSelector(
+  [shop],
+  (shop) => shop.isFetching
+);
+
+export const selectIsCollectionLoading = createSelector(
+  [shop],
+  (shop) => !!!shop.collections
+);
