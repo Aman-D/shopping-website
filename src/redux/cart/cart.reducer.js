@@ -3,7 +3,7 @@ import { addItem, deleteItem, removeItem } from "./cart.utils";
 
 const INITIAL_STATE = {
   hidden: true,
-  cartItems: []
+  cartItems: [],
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -11,22 +11,27 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case cartActionTypes.TOGGEL_CART:
       return {
         ...state,
-        hidden: !state.hidden
+        hidden: !state.hidden,
       };
     case cartActionTypes.ADD_ITEMS:
       return {
         ...state,
-        cartItems: addItem(state.cartItems, action.payload)
+        cartItems: addItem(state.cartItems, action.payload),
       };
     case cartActionTypes.DELETE_ITEMS:
       return {
         ...state,
-        cartItems: deleteItem(state.cartItems, action.payload)
+        cartItems: deleteItem(state.cartItems, action.payload),
       };
     case cartActionTypes.REMOVE_ITEMS:
       return {
         ...state,
-        cartItems: removeItem(state.cartItems, action.payload)
+        cartItems: removeItem(state.cartItems, action.payload),
+      };
+    case cartActionTypes.CLEAR_CART:
+      return {
+        ...state,
+        cartItems: [],
       };
     default:
       return state;
