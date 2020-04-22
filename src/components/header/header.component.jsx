@@ -5,7 +5,6 @@ import CartDropDown from "../cart-dropdown/cartDropDown.component";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { connect } from "react-redux";
-import { auth } from "../../firebase/firebase.utils";
 import { selectCurrentUser } from "../../redux/user/user.selector";
 import { selectCartHidden } from "../../redux/cart/cart.selector";
 import { createStructuredSelector } from "reselect";
